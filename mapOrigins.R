@@ -36,10 +36,10 @@ countries_lab %>%
   mutate(code = tolower(country)) %>%
   ggplot(aes(x = reorder(country, value), y = value)) +
   geom_bar(stat = "identity") +
-  geom_flag(y = -2.5, aes(country = code), size = 8) +
+  geom_flag(y = -1, aes(country = code), size = 4) +
   scale_y_continuous(expand = c(0.1, 1)) +
   xlab("Country") +
-  ylab("Lab members") +
+  ylab("Members") +
   theme_bw() +
   theme(legend.title = element_blank()) +
   coord_flip()
